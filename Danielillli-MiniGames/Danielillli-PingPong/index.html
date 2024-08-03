@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="start-screen" class="screen">
+        <h1>Ping Pong Game</h1>
+        <button id="start-button">Start Game</button>
+    </div>
+
+    <div id="countdown-screen" class="screen hidden">
+        <h1 id="countdown"></h1>
+    </div>
+
+    <div id="game-container" class="screen hidden">
+        <canvas id="pongCanvas" width="800" height="400"></canvas>
+        <div class="score-container">
+            <span id="score">Score: 0</span>
+            <span id="time">Time: 0s</span>
+        </div>
+        <div class="control-buttons">
+            <button id="pause-button">Pause</button>
+            <button id="reset-button">Reset</button>
+        </div>
+    </div>
+
+    <div id="game-over-screen" class="screen hidden">
+        <h1>Game Over</h1>
+        <p id="final-score">Final Score: 0</p>
+        <button id="restart-button">Play Again</button>
+    </div>
+
+    <audio id="game-music" loop>
+        <source src="Gamemusic.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="game.js"></script>
+</body>
+</html>
